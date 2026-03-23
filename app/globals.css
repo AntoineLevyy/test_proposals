@@ -972,6 +972,179 @@ html, body {
 .dot-green { background: #10B981; }
 .dot-purple { background: #8B5CF6; }
 
+/* Optional cards (greyed out when collapsed) */
+.form-card-optional {
+  opacity: 0.55;
+  transition: opacity 0.3s;
+}
+
+.form-card-optional:hover {
+  opacity: 0.75;
+}
+
+.optional-badge {
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--beige-text-muted);
+  background: rgba(12,22,40,0.06);
+  padding: 3px 10px;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* Step section collapsible */
+.step-section-label-clickable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.step-section-label-clickable:hover {
+  opacity: 0.7;
+}
+
+.step-section-collapsed {
+  padding-bottom: 16px;
+}
+
+/* Creative strategy wrapper card */
+.creative-strategy-card {
+  padding-bottom: 8px;
+}
+
+.creative-strategy-card .steps-section {
+  gap: 12px;
+}
+
+/* Collapsible card header */
+.form-card-header-clickable {
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition);
+}
+
+.form-card-header-clickable:hover {
+  opacity: 0.8;
+}
+
+/* Step tabs */
+.step-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 0;
+  overflow-x: auto;
+}
+
+.step-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: rgba(12,22,40,0.04);
+  border: 1px solid var(--beige-border);
+  border-bottom: none;
+  border-radius: var(--radius-card) var(--radius-card) 0 0;
+  font-family: var(--font-main);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--beige-text-sec);
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+}
+
+.step-tab:hover {
+  background: rgba(12,22,40,0.08);
+  color: var(--beige-text);
+}
+
+.step-tab.active {
+  background: var(--beige-card);
+  border-color: var(--beige-border);
+  color: var(--beige-text);
+  position: relative;
+}
+
+.step-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--beige-card);
+}
+
+.step-tab-number {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--nb-blue-dim);
+  color: var(--nb-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-tab.active .step-tab-number {
+  background: var(--nb-blue);
+  color: #fff;
+}
+
+/* Segmentation add/remove */
+.btn-add-seg {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: 1px dashed var(--beige-border);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--beige-text-sec);
+  cursor: pointer;
+  transition: var(--transition);
+  font-family: var(--font-main);
+  align-self: flex-start;
+}
+
+.btn-add-seg svg {
+  width: 12px;
+  height: 12px;
+}
+
+.btn-add-seg:hover {
+  border-color: var(--nb-blue);
+  color: var(--nb-blue);
+  background: rgba(26,82,240,0.04);
+}
+
+.seg-remove-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  background: transparent;
+  border: 1px solid var(--beige-border);
+  border-radius: 6px;
+  color: var(--beige-text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.seg-remove-btn:hover {
+  background: rgba(239,68,68,0.06);
+  border-color: rgba(239,68,68,0.3);
+  color: #ef4444;
+}
+
 /* =========================================
    Responsive
    ========================================= */
